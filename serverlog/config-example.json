@@ -1,0 +1,31 @@
+{
+	"jobs" : [
+		{
+			"cycle": "60",  // check every 60 seconds
+			"log-cycle": "60", // log every 60 checking, so log every 60 mins.
+			"type": "SERVER-RUN",
+			"args": {
+				"cpu": {
+					"warning": "70%",
+					"error": "90%"
+				},
+				"memory": {
+					"warning": "70%",
+					"error": "90%"
+				}
+			}
+		},
+		{
+			"cycle": "3600",
+			"log-cycle": "6",
+			"type": "SERVER-DISK",
+			"args": {
+				"disk": {
+					"path": "/var/db",
+					"warning": "70%",
+					"error": "80%"
+				},
+			}
+		},
+	]
+}
